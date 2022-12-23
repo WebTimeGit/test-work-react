@@ -1,0 +1,84 @@
+@use "mixins";
+@import "variables";
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-min) {
+    max-width: $tablet-min;
+  }
+  @media (min-width: $desktop-min) {
+    max-width: $desktop-min;
+  }
+}
+
+body {
+  background: $third-bg;
+  color: $secondary-color;
+
+  section {
+    @include mixins.padding;
+  }
+
+  .header {
+    background: $secondary-bg;
+
+    * {
+      color: $fourth-color;
+    }
+
+    button {
+      svg {
+        fill: $fourth-color;
+      }
+    }
+  }
+
+  .footer {
+    background: $secondary-bg;
+
+    * {
+      color: $fourth-color;
+    }
+
+    svg {
+      fill: $fourth-color;
+    }
+  }
+}
+
+.dark {
+  body {
+    background: $primary-bg;
+    color: $primary-color;
+
+    h1,h2,h3,h4,h5,h6 {
+      color: $third-color;
+    }
+
+    .header {
+      background: $secondary-color;
+
+      button {
+        svg {
+          fill: $third-color;
+        }
+      }
+    }
+
+    .footer {
+      background: $secondary-color;
+
+      * {
+        color: $third-color;
+      }
+
+      svg {
+        fill: $third-color;
+      }
+    }
+  }
+}
+

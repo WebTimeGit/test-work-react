@@ -1,0 +1,27 @@
+/* variables.scss */
+
+$mobile-min: 428px;
+$tablet-min: 744px;
+$desktop-min: 1200px;
+
+$primary-bg: #2f263c;
+$secondary-bg: #222222;
+$third-bg: #f9f9f9;
+
+$primary-color: #efc54d;
+$secondary-color: #333;
+$third-color: #ce8dc4;
+$fourth-color: #fff;
+
+:export {
+  primaryBg: $primary-bg;
+  secondaryBg: $secondary-bg;
+  third-bg: $third-bg;
+
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+
+  mobileMin: $mobile-min;
+  tabletMin: $tablet-min;
+  desktopMin: $desktop-min;
+}
