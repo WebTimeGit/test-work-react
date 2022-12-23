@@ -1,0 +1,10 @@
+@use "../../../styles/mixins";
+@import '../../../styles/variables';
+
+.footer {
+  padding: 15px 0;
+}
+
+.content {
+  @include mixins.flex(space-between, center, nowrap);
+}
