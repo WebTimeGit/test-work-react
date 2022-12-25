@@ -1,11 +1,10 @@
-import Image                          from "next/image";
-import React, { useState } from "react";
-import style               from './Iframe.module.scss';
+import Image                   from "next/image";
+import React, { FC, useState } from "react";
+import style                   from './Iframe.module.scss';
+import { IframeProps }     from './IframeProps';
 
 
-const embedID = "RK1K2bCg4J8";
-
-const Iframe = () => {
+const Iframe:FC<IframeProps> = ({embed}) => {
 	const [ imageClicked, setImageClicked ] = useState(false);
 
 	const onThumbnailClick = () => {
@@ -17,7 +16,7 @@ const Iframe = () => {
 			{ !imageClicked ?
 				<div className={style.iframePoster} onClick={ onThumbnailClick }>
 					<Image
-						src={`https://img.youtube.com/vi/${ embedID }/sddefault.jpg`}
+						src={`https://img.youtube.com/vi/${ embed }/sddefault.jpg`}
 						layout="fill"
 						objectFit="cover"
 						alt="yt thumbnail"
@@ -30,7 +29,7 @@ const Iframe = () => {
 					allowFullScreen
 					src={
 						imageClicked
-							? `https://www.youtube.com/embed/${ embedID }?rel=0&showinfo=0&autoplay=1`
+							? `https://www.youtube.com/embed/${ embed }?rel=0&showinfo=0&autoplay=1`
 							: ""
 					}
 					title="youtube video"
