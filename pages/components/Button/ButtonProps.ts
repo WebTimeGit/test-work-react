@@ -1,8 +1,5 @@
-import React from 'react';
-
-
 export interface ButtonProps {
-	children: React.ReactNode|string;
+	children: JSX.Element | string;
 	className?: string
 	onClick?: () => void
 }
