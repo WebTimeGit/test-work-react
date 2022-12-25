@@ -1,5 +1,7 @@
 import React  from 'react'
 import styles from './Users.module.scss'
+import Button from '../Button/Button';
+import Image  from 'next/image';
 
 
 const Users = () => {
@@ -7,7 +9,34 @@ const Users = () => {
 		<section className={ styles.user }>
 			<div className={ `container` }>
 				<h2>our users</h2>
-				<div className={ styles.users_header }>
+				<table className={styles.usersTable}>
+					<thead>
+					<tr>
+						<th>photo</th>
+						<th>name</th>
+						<th>status</th>
+						<th>registration</th>
+						<th>age</th>
+						<th>action</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<Image src="/vercel.svg" alt="Vercel Logo" width={ 72 } height={ 16 }/>
+							</td>
+							<td>Mr. smith</td>
+							<td>offline</td>
+							<td>Toronto</td>
+							<td>35 year</td>
+							<td>
+								<Button className={ styles.user_card__btn }>Chat</Button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				{/*				<div className={ styles.users_header }>
 					<div className={ styles.cel }>photo</div>
 					<div className={ styles.cell }>name</div>
 					<div className={ styles.cell }>status</div>
@@ -23,9 +52,10 @@ const Users = () => {
 					<div className={ `${ styles.cell } ${ styles.user_card__registration }` }>Toronto</div>
 					<div className={ `${ styles.cell } ${ styles.user_card__age }` }>35 year</div>
 					<div className={ `${ styles.cell } ${ styles.user_card__action }` }>
-						<button className={ styles.user_card__btn }>Chat</button>
+
+						<Button className={ styles.user_card__btn }>Chat</Button>
 					</div>
-				</div>
+				</div>*/ }
 			</div>
 		</section>
 	)
