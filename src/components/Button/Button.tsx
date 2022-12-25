@@ -4,7 +4,7 @@ import { FC }          from 'react';
 const Button:FC<ButtonProps> = ({online, children, className, onClick}) => {
 	return (
 		<button
-			disabled={online === false ? true : undefined}
+			disabled={online === false ? true : false}
 			className={`${styles.button} ${className ? className : 'default'}`}
 			onClick={onClick}
 		>{children}</button>
