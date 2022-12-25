@@ -1,9 +1,10 @@
-import React  from "react";
-import Head   from 'next/head';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+import { FC } from "react"
+import Head          from 'next/head'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
-import { Poppins } from '@next/font/google'
+import { Poppins }     from '@next/font/google'
+import { LayoutProps } from './LayoutProps'
 
 const poppins = Poppins({
 	weight: ['400', '700'],
@@ -11,7 +12,7 @@ const poppins = Poppins({
 	subsets: ['latin'],
 })
 
-const Layout = ({children}) => {
+const Layout:FC<LayoutProps> = ({children}) => {
 	return (
 		<>
 			<Head>
@@ -31,7 +32,7 @@ const Layout = ({children}) => {
 				<Footer/>
 			</div>
 		</>
-	);
+	)
 }
 
-export default Layout;
+export default Layout

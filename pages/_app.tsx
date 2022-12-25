@@ -1,6 +1,6 @@
-import Layout from './components/Layout'
+import Layout            from '../src/components/Layout/Layout'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from 'next-themes'
 import '../styles/globals.css'
 import '../styles/global.scss'
 

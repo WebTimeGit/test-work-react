@@ -1,5 +1,5 @@
-import Banner from './components/Banner/Banner'
-import Users  from './components/Users/Users'
+import Banner from '../src/components/Banner/Banner'
+import Users  from '../src/components/Users/Users'
 import React  from 'react';
 
 
