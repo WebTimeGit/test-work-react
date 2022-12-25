@@ -162,25 +162,21 @@
   }
 
   button {
+    background-color: $third-color;
+    color: $six-color;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 0 auto;
 
-    @media (min-width: 768px) {
-      display: block;
+    &:disabled,
+    &[disabled] {
       background-color: $third-color;
-      color: $six-color;
-      border: none;
-      outline: none;
-      border-radius: 15px;
-      padding: 7px 12px;
-      cursor: pointer;
-      font-size: 15px;
-      margin: 0 auto;
-
-      &:disabled,
-      &[disabled] {
-        background-color: $third-color;
-        color: $five-color;
-        pointer-events: none;
-      }
+      color: $five-color;
+      pointer-events: none;
     }
   }
 }
