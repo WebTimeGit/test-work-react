@@ -1,6 +1,6 @@
 import Image                          from "next/image";
 import React, { useState } from "react";
-import style                          from './Iframe.module.scss';
+import style               from './Iframe.module.scss';
 
 
 const embedID = "RK1K2bCg4J8";
