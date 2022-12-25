@@ -1,18 +1,30 @@
 @use "mixins";
 @import "variables";
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
 .container {
   max-width: 100%;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
 
   @media (min-width: $tablet-min) {
-    max-width: $tablet-min;
+    max-width: $container;
+    padding: 0 30px;
   }
   @media (min-width: $desktop-min) {
-    max-width: $desktop-min;
+    padding: 0 20px;
   }
 }
+
 
 body {
   background: $third-bg;
@@ -20,6 +32,41 @@ body {
 
   section {
     @include mixins.padding;
+  }
+
+  h1 {
+    font-size: $h1-mobile;
+    margin-bottom: 30px;
+    
+    @media (min-width: $desktop-min) {
+      font-size: $h1-desktop;
+    }
+  }
+
+  h2 {
+    font-size: $h2-mobile;
+    margin-bottom: 20px;
+
+    @media (min-width: $desktop-min) {
+      font-size: $h2-desktop;
+    }
+  }
+
+  p {
+    font-size: $p-mobile;
+    margin-bottom: 16px;
+
+    @media (min-width: $desktop-min) {
+      font-size: $p-desktop;
+    }
+  }
+
+  a {
+
+    &:hover {
+    text-decoration: underline;
+      color: $hover-blackColor;
+    }
   }
 
   .header {
@@ -51,11 +98,19 @@ body {
 
 .dark {
   body {
+    min-height: 8000px;
     background: $primary-bg;
     color: $primary-color;
 
     h1,h2,h3,h4,h5,h6 {
       color: $third-color;
+    }
+
+    a {
+
+      &:hover {
+        color: $hover-lightColor;
+      }
     }
 
     .header {

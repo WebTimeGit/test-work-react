@@ -1,27 +1,61 @@
 /* variables.scss */
 
-$mobile-min: 428px;
-$tablet-min: 744px;
-$desktop-min: 1200px;
+// Media
+$mobile-min: 320px;
+$tablet-min: 767px;
+$desktop-min: 991px;
 
+$container: 1200px;
+
+//bg color
 $primary-bg: #2f263c;
 $secondary-bg: #222222;
 $third-bg: #f9f9f9;
 
+//text color
 $primary-color: #efc54d;
 $secondary-color: #333;
 $third-color: #ce8dc4;
 $fourth-color: #fff;
+$five-color: #666;
+$six-color: #101010;
+$hover-lightColor: #ffe69d;
+$hover-blackColor: #2f263c;
+
+
+//font size
+$h1-desktop: 32px;
+$h1-mobile: 24px;
+
+$h2-desktop: 28px;
+$h2-mobile: 20px;
+
+$p-desktop: 18px;
+$p-mobile: 16px;
 
 :export {
+  // Media
+  mobileMin: $mobile-min;
+  tabletMin: $tablet-min;
+  desktopMin: $desktop-min;
+
+  //bg color
   primaryBg: $primary-bg;
   secondaryBg: $secondary-bg;
   third-bg: $third-bg;
 
+  //text color
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
 
-  mobileMin: $mobile-min;
-  tabletMin: $tablet-min;
-  desktopMin: $desktop-min;
+
+  //font size
+  h1Desktop: $h1-desktop;
+  h1Mobile: $h1-mobile;
+
+  h2Desktop: $h2-desktop;
+  h2Mobile: $h2-mobile;
+
+  pDesktop: $p-desktop;
+  pMobile: $p-mobile;
 }

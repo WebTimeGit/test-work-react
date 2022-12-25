@@ -7,4 +7,8 @@
 
 .content {
   @include mixins.flex(space-between, center, nowrap);
+
+  h2 {
+    margin-bottom: 0;
+  }
 }

@@ -7,4 +7,12 @@
 
 .content {
   @include mixins.flex(space-between, center, nowrap);
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 150px;
+  }
 }

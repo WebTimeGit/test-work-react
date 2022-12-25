@@ -1,0 +1,28 @@
+@use "./styles/mixins";
+@import './styles/variables';
+
+
+.bannerContainer {
+  @include mixins.flex(space-between, flex-start);
+  gap: 20px 30px;
+
+  @media (min-width: $tablet-min) {
+    @include mixins.flex(center);
+  }
+  @media (min-width: $desktop-min) {
+    @include mixins.flex(space-between, flex-start, nowrap);
+  }
+
+  .text {
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: $tablet-min) {
+      max-width: 430px;
+    }
+    @media (min-width: $desktop-min) {
+      max-width: 530px;
+      text-align: left;
+    }
+  }
+}

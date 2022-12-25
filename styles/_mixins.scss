@@ -1,3 +1,5 @@
+@import "variables";
+
 /* mixin.scss */
 
 @mixin flex ($justify: center, $align: center, $wrap: wrap) {
@@ -8,9 +10,53 @@
 }
 
 @mixin padding {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 @mixin button {
   padding: 7px 12px;
+}
+
+@mixin PlayBtn {
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border: 10px solid rgba(255, 255, 255, .75);
+    border-radius: 50%;
+    transition: .3s ease;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 21px;
+    height: 24px;
+    background: rgba(255, 255, 255, .75);
+    transition: .3s ease;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &:hover::before, &:active::before, &:focus::before {
+    border-color: $primary-bg;
+    transition: .3s ease;
+  }
+
+  &:hover::after, &:focus::after, &:active::after {
+    background: $primary-bg;
+    transition: .3s ease;
+  }
 }
