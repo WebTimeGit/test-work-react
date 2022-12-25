@@ -29,6 +29,7 @@ img {
 body {
   background: $third-bg;
   color: $secondary-color;
+  height: 8000px;
 
   section {
     @include mixins.padding;

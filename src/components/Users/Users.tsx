@@ -1,10 +1,12 @@
-import React  from 'react'
-import styles from './Users.module.scss'
-import Button from '../Button/Button';
-import Image  from 'next/image';
+import { FC } from 'react'
+import styles        from './Users.module.scss'
+import Button        from '../Button/Button';
+import Image         from 'next/image';
+import { UserProps } from './UserProps';
 
 
-const Users = () => {
+const Users:FC<UserProps> = ({users}) => {
+
 	return (
 		<section className={ styles.user }>
 			<div className={ `container` }>
@@ -21,41 +23,27 @@ const Users = () => {
 					</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>
-								<Image src="/vercel.svg" alt="Vercel Logo" width={ 72 } height={ 16 }/>
-							</td>
-							<td>Mr. smith</td>
-							<td>offline</td>
-							<td>Toronto</td>
-							<td>35 year</td>
-							<td>
-								<Button className={ styles.user_card__btn }>Chat</Button>
-							</td>
-						</tr>
+
+					{
+						users?.map((user, i: number) => {
+							return (
+								<tr key={i}>
+									<td>
+										<Image src={user.photo} alt={user.name} width={ 60 } height={ 60 }/>
+									</td>
+									<td>{user.name}</td>
+									<td>{user.online ? 'online' : 'offline'}</td>
+									<td>{user.registration}</td>
+									<td>{user.age}</td>
+									<td>
+										<Button className={ styles.user_card__btn } online={user.online} >Chat</Button>
+									</td>
+								</tr>
+							)
+						})
+					}
 					</tbody>
 				</table>
-
-				{/*				<div className={ styles.users_header }>
-					<div className={ styles.cel }>photo</div>
-					<div className={ styles.cell }>name</div>
-					<div className={ styles.cell }>status</div>
-					<div className={ styles.cell }>registration</div>
-					<div className={ styles.cell }>age</div>
-					<div className={ styles.cell }>action</div>
-				</div>
-
-				<div className={ styles.user_card }>
-					<div className={ `${ styles.cell } ${ styles.user_card__photo }` }>image</div>
-					<div className={ `${ styles.cell } ${ styles.user_card__name }` }>Mr. smith</div>
-					<div className={ `${ styles.cell } ${ styles.user_card__status }` }>offline</div>
-					<div className={ `${ styles.cell } ${ styles.user_card__registration }` }>Toronto</div>
-					<div className={ `${ styles.cell } ${ styles.user_card__age }` }>35 year</div>
-					<div className={ `${ styles.cell } ${ styles.user_card__action }` }>
-
-						<Button className={ styles.user_card__btn }>Chat</Button>
-					</div>
-				</div>*/ }
 			</div>
 		</section>
 	)
