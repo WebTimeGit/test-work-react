@@ -12,7 +12,7 @@ const nextConfig = {
   },
     ],
     minimumCacheTTL: 1500000,
-    domains: 'tz.smart-ui.pro',
+    domains: ['tz.smart-ui.pro'],
   },
 };
 
