@@ -1,14 +1,14 @@
 import axios         from 'axios'
 import { DataProps } from '../interfaces';
 
-
+export const baseUrl = 'https://tz.smart-ui.pro'
 
 const apiInstance = axios.create({
-	baseURL: 'https://tz.smart-ui.pro/',
+	baseURL: baseUrl,
 })
 
 const endpoints = {
-	getData: () => apiInstance.get<any>('')
+	getData: async () => await apiInstance.get<DataProps>('')
 }
 
 export default endpoints

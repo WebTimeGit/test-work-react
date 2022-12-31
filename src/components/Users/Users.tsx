@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC }        from 'react'
 import styles        from './Users.module.scss'
 import Button        from '../Button/Button';
 import Image         from 'next/image';
 import { UserProps } from './UserProps';
+import { baseUrl }   from '../../api/api';
 
 
 const Users:FC<UserProps> = ({users}) => {
@@ -25,11 +26,11 @@ const Users:FC<UserProps> = ({users}) => {
 					<tbody>
 
 					{
-						users?.map((user, i: number) => {
+						users?.map((user, i) => {
 							return (
 								<tr key={i}>
 									<td>
-										<Image src={user.photo} alt={user.name} width={ 60 } height={ 60 }/>
+										<Image src={baseUrl+user.photo} alt={user.name} width={ 60 } height={ 60 }/>
 									</td>
 									<td>{user.name}</td>
 									<td>{user.online ? 'online' : 'offline'}</td>

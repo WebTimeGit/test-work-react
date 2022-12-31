@@ -1,12 +1,12 @@
 export type TypeUser = {
-	photo: string
+	age: number
 	name: string
 	online: boolean
+	photo: string
 	registration: string
-	age: number
 }
 
 export interface UserProps {
-	users: TypeUser[] | []
+	users: TypeUser[]
 }
 
