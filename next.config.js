@@ -9,9 +9,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'img.youtube.com'
-      },
+  },
     ],
     minimumCacheTTL: 1500000,
+    domains: ['tz.smart-ui.pro'],
   },
 };
 

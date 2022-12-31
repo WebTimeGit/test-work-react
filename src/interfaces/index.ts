@@ -1,9 +1,12 @@
 import { Banner }              from '../components/Banner/BannerProps';
-import { TypeUser, UserProps } from '../components/Users/UserProps';
+import { TypeUser } from '../components/Users/UserProps';
 
+type TypeData = {
+	users: TypeUser[]
+	video: Banner
+}
 
 
 export type DataProps = {
-	video: Banner
-	users: TypeUser[]
+	data:TypeData
 }
