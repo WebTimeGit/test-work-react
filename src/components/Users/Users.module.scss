@@ -162,21 +162,77 @@
   }
 
   button {
-    background-color: $third-color;
-    color: $six-color;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    padding: 7px 12px;
-    cursor: pointer;
-    font-size: 15px;
-    margin: 0 auto;
+    background-color: initial;
+
+    @media (min-width: $tablet-min) {
+      background-color: $third-color;
+      color: $six-color;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      padding: 7px 12px;
+      cursor: pointer;
+      font-size: 15px;
+      margin: 0 auto;
+    }
 
     &:disabled,
     &[disabled] {
-      background-color: $third-color;
       color: $five-color;
+      opacity: .5;
       pointer-events: none;
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: $tablet-min) {
+        display: block;
+      }
+    }
+
+    svg {
+      @media (min-width: $tablet-min) {
+        display: none;
+      }
+
+      path {
+        fill: $third-color;
+
+        &:not(:first-child) {
+          fill: $fourth-color;
+        }
+      }
+    }
+  }
+}
+
+:global(.dark) {
+  .usersTable {
+    button {
+      background-color: initial;
+
+      @media (min-width: $tablet-min) {
+        background-color: $six-color;
+        color: $third-color;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        padding: 7px 12px;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 0 auto;
+      }
+
+      svg {
+        path {
+          fill: $fourth-color;
+
+          &:not(:first-child) {
+            fill: $six-color;
+          }
+        }
+      }
     }
   }
 }
