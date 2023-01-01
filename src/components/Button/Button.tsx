@@ -1,10 +1,10 @@
 import styles          from './Button.module.scss'
 import { ButtonProps } from './ButtonProps';
 import { FC }          from 'react';
-const Button:FC<ButtonProps> = ({online, children, className, onClick}) => {
+const Button:FC<ButtonProps> = ({isDisabled, children, className, onClick}) => {
 	return (
 		<button
-			disabled={online === false ? true : false}
+			disabled={isDisabled}
 			className={`${styles.button} ${className ? className : 'default'}`}
 			onClick={onClick}
 		>{children}</button>
