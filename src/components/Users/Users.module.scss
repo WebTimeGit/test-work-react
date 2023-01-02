@@ -4,8 +4,11 @@
 .usersTable {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid $third-color;
   margin-bottom: 20px;
+
+  @media (min-width: $desktop-min) {
+    border: 1px solid $third-color;
+  }
 
   thead {
     display: none;
@@ -19,15 +22,17 @@
     tr {
       display: grid;
       grid-template-columns: 60% 1fr;
+      border: 1px solid $third-color;
 
       @media (min-width: $tablet-min) and (max-width: $desktop-min) {
         grid-template-columns: 230px 1fr;
       }
       @media (min-width: $desktop-min) {
         display: table-row;
+        border: initial;
       }
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 40px;
 
         @media (min-width: $desktop-min) {
@@ -43,7 +48,7 @@
         }
 
         &:nth-child(1) {
-          @media (max-width: $desktop-min){
+          @media (max-width: $desktop-min) {
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 1;
