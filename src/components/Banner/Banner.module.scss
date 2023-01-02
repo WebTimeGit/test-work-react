@@ -5,6 +5,8 @@
 .bannerContainer {
   @include mixins.flex(space-between, flex-start);
   gap: 20px 30px;
+  max-width: 1060px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-min) {
     @include mixins.flex(center);
