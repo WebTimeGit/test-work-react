@@ -10,7 +10,7 @@ const Users: FC<UserProps> = ({ users }) => {
 
 
 	return (
-		<section className={ styles.user }>
+		<section className={ styles.users }>
 			<div className={ 'container' }>
 				<h2>our users</h2>
 				<table className={ styles.usersTable }>
@@ -30,7 +30,7 @@ const Users: FC<UserProps> = ({ users }) => {
 						users?.map((user, i) => {
 							return (
 								<tr key={ i }>
-									<td>
+									<td className={styles.avatar}>
 										<Image src={ baseUrl + user.photo } alt={ user.name } width={ 60 } height={ 60 }/>
 									</td>
 									<td>{ user.name }</td>
