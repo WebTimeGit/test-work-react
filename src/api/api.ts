@@ -1,5 +1,6 @@
 import axios         from 'axios'
-import { DataProps } from '../interfaces';
+import { DataProps } from '../interfaces'
+
 
 export const baseUrl = 'https://tz.smart-ui.pro'
 

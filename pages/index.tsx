@@ -1,13 +1,11 @@
 import Banner        from '../src/components/Banner/Banner'
 import Users         from '../src/components/Users/Users'
-import { DataProps } from '../src/interfaces';
-import { FC }        from 'react';
-import endpoints     from '../src/api/api';
+import { DataProps } from '../src/interfaces'
+import { FC }        from 'react'
+import endpoints     from '../src/api/api'
 
 
-
-const Home:FC<DataProps> = ({data}) => {
-	console.log(data)
+const Home: FC<DataProps> = ({ data }) => {
 	return (
 		<>
 			<Banner banner={ data.video }/>
@@ -20,8 +18,8 @@ export default Home
 
 export async function getStaticProps() {
 	try {
-		const result = await endpoints.getData();
-		const data= result.data;
+		const result = await endpoints.getData()
+		const data = result.data
 		return {
 			props: {
 				data
@@ -29,6 +27,6 @@ export async function getStaticProps() {
 		}
 	}
 	catch (error) {
-		console.log(error);
+		console.log(error)
 	}
 }

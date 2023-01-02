@@ -1,18 +1,19 @@
-import { FC } from "react"
-import Head          from 'next/head'
+import { FC } from 'react'
+import Head   from 'next/head'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
 import { Poppins }     from '@next/font/google'
 import { LayoutProps } from './LayoutProps'
 
+
 const poppins = Poppins({
-	weight: ['400', '700'],
+	weight: [ '400', '700' ],
 	style: 'normal',
-	subsets: ['latin'],
+	subsets: [ 'latin' ],
 })
 
-const Layout:FC<LayoutProps> = ({children}) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<>
 			<Head>
@@ -22,11 +23,11 @@ const Layout:FC<LayoutProps> = ({children}) => {
 				<noscript id="inject-styles-here"></noscript>
 			</Head>
 
-			<div className={`min-h-screen flex flex-col ${poppins.className}`}>
+			<div className={ `min-h-screen flex flex-col ${ poppins.className }` }>
 				<Header/>
 
 				<main className="flex-grow">
-					{children}
+					{ children }
 				</main>
 
 				<Footer/>

@@ -9,7 +9,6 @@ const Header = () => {
 		<header className={ `header ${ styles.header }` }>
 			<div className={ `container ${ styles.content }` }>
 				<h2>React app typescript + next.js for seo</h2>
-
 				<SwitchTheme/>
 			</div>
 		</header>

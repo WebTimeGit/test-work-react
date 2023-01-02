@@ -1,5 +1,6 @@
-import { Banner }              from '../components/Banner/BannerProps';
-import { TypeUser } from '../components/Users/UserProps';
+import { Banner }   from '../components/Banner/BannerProps'
+import { TypeUser } from '../components/Users/UserProps'
+
 
 type TypeData = {
 	users: TypeUser[]
@@ -8,5 +9,5 @@ type TypeData = {
 
 
 export type DataProps = {
-	data:TypeData
+	data: TypeData
 }
