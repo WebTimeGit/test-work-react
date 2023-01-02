@@ -14,7 +14,7 @@ const Iframe: FC<IframeProps> = ({ embed }) => {
 	return (
 		<div className={ style.iframe }>
 			{ !imageClicked ?
-				<div className={ style.iframePoster } onClick={ onThumbnailClick }>
+				<button className={ style.iframePoster } onClick={ onThumbnailClick }>
 					<Image
 						src={ `https://img.youtube.com/vi/${ embed }/sddefault.jpg` }
 						layout="fill"
@@ -22,9 +22,10 @@ const Iframe: FC<IframeProps> = ({ embed }) => {
 						alt="yt thumbnail"
 						priority
 					/>
-				</div>
+				</button>
 				:
 				<iframe
+					itemType='button'
 					frameBorder="1"
 					allowFullScreen
 					src={
