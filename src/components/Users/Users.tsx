@@ -31,14 +31,14 @@ const Users: FC<UserProps> = ({ users }) => {
 							return (
 								<tr key={ i }>
 									<td className={styles.avatar}>
-										<Image src={ baseUrl + user.photo } alt={ user.name } width={ 60 } height={ 60 }/>
+										<Image src={ baseUrl + user.photo } alt={ user.name } width={ 612 } height={ 345 }/>
 									</td>
 									<td>{ user.name }</td>
 									<td>{ user.online ? 'online' : 'offline' }</td>
 									<td>{ user.registration }</td>
 									<td>{ user.age }</td>
 									<td>
-										<Button className={ styles.user_card__btn } isDisabled={ !user.online }>
+										<Button className={ styles.user_card__btn } isDisabled={ !user.online } label="Chat button">
 											<span>Chat</span>
 											<svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path

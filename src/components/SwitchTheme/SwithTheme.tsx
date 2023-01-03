@@ -20,6 +20,7 @@ const SwitchTheme = () => {
 	return (
 		<Button
 			onClick={ () => setTheme(theme === 'light' ? 'dark' : 'light') }
+			label={theme === 'light' ? 'Light theme ' : 'Dark theme'}
 		>
 			{ theme === 'light' ?
 				<svg
