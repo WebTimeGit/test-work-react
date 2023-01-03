@@ -14,6 +14,10 @@ const nextConfig = {
     minimumCacheTTL: 1500000,
     domains: ['tz.smart-ui.pro'],
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
 }
 
 module.exports = nextConfig
